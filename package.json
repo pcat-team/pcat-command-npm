@@ -1,0 +1,23 @@
+{
+  "name": "pcat-command-npm",
+  "version": "1.0.0",
+  "description": "pcat for pcnpm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcat-team/pcat-command-npm.git"
+  },
+  "keywords": [
+    "pcat",
+    "pcnpm"
+  ],
+  "author": "guoxmin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pcat-team/pcat-command-npm/issues"
+  },
+  "homepage": "https://github.com/pcat-team/pcat-command-npm#readme"
+}
