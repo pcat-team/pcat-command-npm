@@ -39,7 +39,7 @@ exports.run = function(argv, cli) {
     _argv.push("--registry=http://registry.npm.pc.com.cn/");
 
 
-    var child = spawn('npm', _argv,{
+    var child = spawn(process.platform === "win32" ? "npm.cmd" : "npm", _argv,{
         "stdio":"inherit"
     })
 
@@ -104,8 +104,7 @@ exports.run = function(argv, cli) {
 
 
                     if (!fis.util.exists(targetPackage) || (gargv._.slice(1).length && gargv.force)) {
-
-                        fis.util.mkdir(target);
+                        fis.util.mkdir(target.replace(/\\/g,"/"));
 
                         fis.util.copy(rSource, target, ["**"], [rSource + "/{node_modules,test}/**", rSource + "\.**"]);
                         // fis.util.copy(rSourceSrc, targetSrc);
@@ -126,7 +125,7 @@ exports.run = function(argv, cli) {
 
                         // < || 》
                         if (ret != 2) {
-                            fis.log.warn("子系统当前使用的 [%s] 版本为 [%s]，如需安装 [%s] 版本，可通过 pcat install %s --force 强制安装，注意，修改会影响整个子系统，慎重操作！！！", moduleName, targetVersion, sourceVersion, moduleName + "@" + sourceVersion)
+                            fis.log.warn("子系统当前使用的 [%s] 版本为 [%s]，如需安装 [%s] 版本，可通过 pcat npm install %s --force 强制安装，注意，修改会影响整个子系统，慎重操作！！！", moduleName, targetVersion, sourceVersion, moduleName + "@" + sourceVersion)
                         }
                     }
                 }
