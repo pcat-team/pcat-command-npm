@@ -12,8 +12,8 @@ var installed = [];
 
 var gargv;
 
-exports.name = 'npm';
-exports.desc = 'pc npm';
+exports.name = 'cnpm <command> [options]';
+exports.desc = 'use just like npm which registry from http://registry.npm.pc.com.cn';
 exports.options = {
     '-h, --help': 'print this help message'
     ,'install': 'install module from pcnpm'
@@ -125,7 +125,7 @@ exports.run = function(argv, cli) {
 
                         // < || 》
                         if (ret != 2) {
-                            fis.log.warn("子系统当前使用的 [%s] 版本为 [%s]，如需安装 [%s] 版本，可通过 pcat npm install %s --force 强制安装，注意，修改会影响整个子系统，慎重操作！！！", moduleName, targetVersion, sourceVersion, moduleName + "@" + sourceVersion)
+                            fis.log.warn("子系统当前使用的 [%s] 版本为 [%s]，如需安装 [%s] 版本，可通过 pcat cnpm install %s --force 强制安装，注意，修改会影响整个子系统，慎重操作！！！", moduleName, targetVersion, sourceVersion, moduleName + "@" + sourceVersion)
                         }
                     }
                 }
