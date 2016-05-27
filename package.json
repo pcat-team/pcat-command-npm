@@ -1,6 +1,6 @@
 {
   "name": "pcat-command-cnpm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "pcat for pcnpm",
   "main": "index.js",
   "scripts": {

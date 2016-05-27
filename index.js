@@ -106,7 +106,7 @@ exports.run = function(argv, cli) {
                     if (!fis.util.exists(targetPackage) || (gargv._.slice(1).length && gargv.force)) {
                         fis.util.mkdir(target.replace(/\\/g,"/"));
 
-                        fis.util.copy(rSource, target, ["**"], [rSource + "/{node_modules,test}/**", rSource + "\.**"]);
+                        fis.util.copy(rSource, target, ["**"], ["/{node_modules,test}/**", "\.**"]);
                         // fis.util.copy(rSourceSrc, targetSrc);
                         // fis.util.copy(rSourcePackage, targetPackage);
 
