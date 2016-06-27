@@ -13,7 +13,7 @@ var installed = [];
 var gargv;
 
 exports.name = 'cnpm <command> [options]';
-exports.desc = '支持npm所有命令，用于安装 私有仓库(cnpm)的生态模块';
+exports.desc = '支持npm所有命令，用于安装私有仓库(cnpm)的模块';
 exports.options = {
     '-h, --help': 'print this help message'
     ,'install': 'install module from pcnpm'
