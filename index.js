@@ -107,6 +107,14 @@ exports.run = function(argv, cli) {
                         fis.util.mkdir(target.replace(/\\/g,"/"));
 
                         fis.util.copy(rSource, target, ["**"], ["/{node_modules,test}/**", "\.**"]);
+
+
+                        // 删除 node_modules、test、exapmle目录
+                        fis.util.del(path.resolve(target,"node_modules"));
+                        fis.util.del(path.resolve(target,"test"));
+                        fis.util.del(path.resolve(target,"exapmle"));
+
+                        
                         // fis.util.copy(rSourceSrc, targetSrc);
                         // fis.util.copy(rSourcePackage, targetPackage);
 
