@@ -1,5 +1,5 @@
 {
-  "name": "pcat-command-cnpm",
+  "name": "@pc/pcat-command-cnpm",
   "version": "1.0.7",
   "description": "pcat for pcnpm",
   "main": "index.js",
